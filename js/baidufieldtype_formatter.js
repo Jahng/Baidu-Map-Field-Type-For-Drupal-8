@@ -11,16 +11,16 @@
 			var phone = drupalSettings.baidumap.phone;
 			var profile = drupalSettings.baidumap.profile;
 		    var content = '<div class="baidumap-marker">' +
-	            '地址：'+ address +'<br/>\
-	            电话：'+ phone +'<br/>\
-	            简介：' + profile +
+	            Drupal.t('地址') + Drupal.t('：') + address +'<br/>' +
+	            Drupal.t('电话') + Drupal.t('：') + phone +'<br/>' + 
+	            Drupal.t('简介') + Drupal.t('：') + profile +
 	          '</div>';
 			    //创建检索信息窗口对象
 		    var searchInfoWindow = null;
 			searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
-					title  : "公司地址",      //标题
-					width  : 290,             //宽度
-					height : 105,              //高度
+					title  : drupalSettings.baidumap.title,      //标题
+					width  : drupalSettings.baidumap.width,             //宽度
+					height : drupalSettings.baidumap.height,              //高度
 					panel  : "panel",         //检索结果面板
 					enableAutoPan : true,     //自动平移
 					searchTypes   :[
