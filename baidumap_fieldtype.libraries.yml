@@ -8,6 +8,7 @@ baidumap:
   dependencies:
     - core/jquery
     - core/drupalSettings
+    - core/drupal
 
 baidumap.SearchInfoWindow:
   version: 1.x
